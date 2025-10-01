@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: De Cuidados Fundacionales a Arquitectos del Futuro de la Salud Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #FF5A5F;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FF5A5F;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#0B3954] mb-4">Enfermería: De Cuidados Fundacionales a Arquitectos del Futuro de la Salud Global</h1>
+            <p class="text-lg md:text-xl text-[#087E8B] max-w-4xl mx-auto">Una mirada al impacto histórico y las tendencias que están redefiniendo la profesión más grande del sector salud.</p>
+		<p class="text-lg md:text-xl text-[#087E8B] max-w-4xl mx-auto"><strong>Presentado por:</strong> Dr. Arturo Rebollón, MD, MPH, CPH.  Epidemiólogo e Investigador en salud pública.</p>
+        </header>
+
+        <section class="mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-[#0B3954] mb-4">La Columna Vertebral del Sistema Sanitario</h2>
+                    <p class="text-gray-600 mb-4">Las enfermeras y parteras no son solo una parte del personal sanitario; son la base sobre la que se sostiene. Su omnipresencia y dedicación son cruciales para el funcionamiento de cada hospital, clínica y comunidad en el mundo.</p>
+                    <div class="text-7xl font-black text-[#FF5A5F]">~50%</div>
+                    <p class="text-lg font-bold text-[#0B3954]">del personal sanitario mundial.</p>
+                </div>
+                <div>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="workforceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-[#0B3954] mb-8">Los 7 Logros que Transformaron la Salud Mundial</h2>
+            
+            <div class="space-y-8">
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-6">
+                    <div class="text-5xl font-black text-[#BFD7EA]">7</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#087E8B]">Profesionalización y Educación Formal</h3>
+                        <p class="text-gray-600">Desde Florence Nightingale, se pasó de una vocación caritativa a una profesión basada en ciencia, estandarizando la educación y garantizando una calidad de atención sistemática a nivel global.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-6">
+                    <div class="text-5xl font-black text-[#BFD7EA]">6</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#087E8B]">Creación de una Fuerza Laboral Global</h3>
+                        <p class="text-gray-600">La enfermería se convirtió en la profesión sanitaria más numerosa, asegurando la operatividad de los sistemas de salud 24/7 y llevando la atención a los rincones más remotos del planeta.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-6">
+                    <div class="text-5xl font-black text-[#BFD7EA]">5</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#087E8B]">Liderazgo en Salud Pública y Control de Infecciones</h3>
+                        <p class="text-gray-600">Han estado en la vanguardia de la higiene, la vacunación y la respuesta a pandemias, desde la gripe española hasta el COVID-19, siendo cruciales en la prevención y educación sanitaria.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-6">
+                    <div class="text-5xl font-black text-[#BFD7EA]">4</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#087E8B]">Desarrollo de Roles Especializados y de Práctica Avanzada</h3>
+                        <p class="text-gray-600">La profesión ha evolucionado a un espectro de alta especialización (UCI, anestesia, investigación), optimizando equipos de salud y liderando la implementación de nuevas tecnologías y protocolos.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-6">
+                    <div class="text-5xl font-black text-[#BFD7EA]">3</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#087E8B]">Enfoque en el Cuidado Centrado en el Paciente y la Familia</h3>
+                        <p class="text-gray-600">Son las principales defensoras de la humanización de la medicina, viendo al paciente de forma integral y capacitando a las familias para el autocuidado y la toma de decisiones informadas.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-6">
+                    <div class="text-5xl font-black text-[#BFD7EA]">2</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#087E8B]">Impulso a la Investigación en Cuidados (Nursing Science)</h3>
+                        <p class="text-gray-600">Han desarrollado un cuerpo de conocimiento científico propio que valida y mejora las intervenciones, impactando directamente en la seguridad, recuperación y comodidad del paciente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mt-8">
+                <div class="flex items-start gap-6 mb-4">
+                    <div class="text-6xl font-black text-[#FF5A5F]">1</div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-[#0B3954]">Reducción de la Mortalidad y Aumento de la Esperanza de Vida</h3>
+                        <p class="text-gray-600">La evidencia es clara: una mayor dotación de enfermeras se correlaciona con menores tasas de mortalidad hospitalaria. Su rol ha sido el factor más decisivo en la reducción de la mortalidad materno-infantil, uno de los mayores triunfos de la salud pública.</p>
+                    </div>
+                </div>
+                <div class="chart-container h-72 md:h-96">
+                    <canvas id="mortalityChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2 class="text-4xl font-bold text-center text-[#0B3954] mb-8">El Futuro es Ahora: 5 Tendencias Clave</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-[#087E8B] mb-2">1. Líderes en la Transformación Digital</h3>
+                    <p class="text-gray-600 mb-4">No solo usan tecnología, sino que lideran su implementación y validación (telesalud, wearables), asegurando que sea clínicamente relevante y centrada en el paciente.</p>
+                    <div class="chart-container h-64">
+                         <canvas id="digitalTransformationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-[#087E8B] mb-4">2. Big Data e IA en la Práctica Clínica</h3>
+                    <p class="text-gray-600 mb-6">Utilizan IA alimentada por datos de enfermería para pasar de un cuidado reactivo a uno proactivo y predictivo, anticipando el deterioro del paciente y personalizando la atención.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-around text-center gap-4">
+                        <div class="p-4 rounded-lg bg-gray-50 max-w-xs">
+                            <div class="text-4xl mb-2">📋</div>
+                            <h4 class="font-bold text-[#0B3954]">Datos Registrados por Enfermería</h4>
+                        </div>
+                        <div class="flow-arrow font-black transform md:-rotate-0">&rarr;</div>
+                        <div class="p-4 rounded-lg bg-gray-50 max-w-xs">
+                            <div class="text-4xl mb-2">🤖</div>
+                            <h4 class="font-bold text-[#0B3954]">Algoritmos de IA</h4>
+                        </div>
+                        <div class="flow-arrow font-black transform md:-rotate-0">&rarr;</div>
+                        <div class="p-4 rounded-lg bg-gray-50 max-w-xs">
+                            <div class="text-4xl mb-2">📈</div>
+                            <h4 class="font-bold text-[#0B3954]">Análisis Predictivo</h4>
+                        </div>
+                        <div class="flow-arrow font-black transform md:-rotate-0">&rarr;</div>
+                        <div class="p-4 rounded-lg bg-[#FF5A5F] text-white max-w-xs">
+                            <div class="text-4xl mb-2">❤️</div>
+                            <h4 class="font-bold">Cuidado Proactivo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#087E8B] mb-2">3. Expansión en Atención Primaria</h3>
+                    <p class="text-gray-600">Las enfermeras de práctica avanzada se están convirtiendo en el principal proveedor de atención primaria para millones, mejorando el acceso y la gestión de enfermedades crónicas.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#087E8B] mb-2">4. Liderazgo en Políticas de Salud</h3>
+                    <p class="text-gray-600">Un número creciente de enfermeras con doctorados ascienden a roles de alta dirección en ministerios y organizaciones como la OMS, creando políticas más pragmáticas y humanas.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-[#087E8B] mb-2">5. Enfoque en Salud Planetaria</h3>
+                    <p class="text-gray-600">Lideran la conexión entre medio ambiente y salud, promoviendo sistemas sanitarios sostenibles y educando sobre los impactos del cambio climático.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center text-[#0B3954] mb-2">✨ Explora tu Futuro en la Enfermería con IA</h2>
+                <p class="text-center text-gray-600 mb-6">Selecciona las tendencias que más te interesan y deja que la IA genere un posible perfil profesional para ti.</p>
+                
+                <div id="career-interests" class="flex flex-wrap justify-center gap-x-6 gap-y-4 mb-8 text-gray-700">
+                </div>
+    
+                <div class="text-center">
+                    <button id="generate-career-btn" class="bg-[#FF5A5F] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#E04F54] transition duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed">
+                        Generar Perfil Profesional
+                    </button>
+                </div>
+    
+                <div id="career-result-container" class="mt-8" style="display: none;">
+                    <div id="career-result-loader" class="text-center">
+                        <div class="loader"></div>
+                        <p class="text-[#087E8B]">Generando tu perfil...</p>
+                    </div>
+                    <div id="career-result-content" class="p-6 bg-gray-50 rounded-lg prose max-w-none"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-16 text-center">
+            <div class="bg-[#0B3954] text-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4">Un Llamado a la Innovación Colaborativa</h2>
+                <p class="text-[#BFD7EA] mb-4">La perspectiva de la enfermería no es solo valiosa, es indispensable. Involucrarlas como socias estratégicas en la co-creación del futuro de la salud es el camino para que nuestras innovaciones tengan un impacto real, equitativo y sostenible.</p>
+                <p class="font-bold text-lg">La enfermería es el sistema nervioso central de la salud: sensible, inteligente y adaptativo.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const palette = {
+            deepBlue: '#0B3954',
+            teal: '#087E8B',
+            lightBlue: '#BFD7EA',
+            red: '#FF5A5F',
+            tan: '#C18C5D',
+            gray: '#6B7280'
+        };
+
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        function wrapLabels(label) {
+            const max = 16;
+            if (label.length <= max) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for(const word of words) {
+                if ((currentLine + ' ' + word).length > max) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine += (currentLine ? ' ' : '') + word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const workforceCtx = document.getElementById('workforceChart').getContext('2d');
+        new Chart(workforceCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Enfermería y Partería', 'Otro Personal Sanitario'],
+                datasets: [{
+                    label: 'Distribución del Personal Sanitario',
+                    data: [50, 50],
+                    backgroundColor: [palette.red, palette.lightBlue],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                cutout: '60%',
+            }
+        });
+
+        const mortalityCtx = document.getElementById('mortalityChart').getContext('2d');
+        new Chart(mortalityCtx, {
+            type: 'line',
+            data: {
+                labels: ['1920', '1950', '1980', '2000', '2020'],
+                datasets: [
+                    {
+                        label: 'Mortalidad Materno-Infantil (Conceptual)',
+                        data: [100, 75, 40, 20, 10],
+                        borderColor: palette.red,
+                        backgroundColor: 'rgba(255, 90, 95, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                    },
+                    {
+                        label: 'Esperanza de Vida (Conceptual)',
+                        data: [40, 55, 65, 70, 78],
+                        borderColor: palette.teal,
+                        backgroundColor: 'rgba(8, 126, 139, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Índice de Mejora / Años'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const digitalCtx = document.getElementById('digitalTransformationChart').getContext('2d');
+        new Chart(digitalCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Telesalud', ['Registros', 'Electrónicos'], 'Wearables', ['Validación', 'Clínica'], ['Liderazgo de', 'Implementación']],
+                datasets: [{
+                    label: 'Competencias Digitales en Enfermería',
+                    data: [8, 9, 7, 8, 9],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 90, 95, 0.2)',
+                    borderColor: palette.red,
+                    pointBackgroundColor: palette.red,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: palette.red
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: false
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                            font: {
+                                size: 10
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const interestsContainer = document.getElementById('career-interests');
+        const generateBtn = document.getElementById('generate-career-btn');
+        const resultContainer = document.getElementById('career-result-container');
+        const resultLoader = document.getElementById('career-result-loader');
+        const resultContent = document.getElementById('career-result-content');
+
+        const trends = [
+            'Transformación Digital',
+            'Big Data e IA',
+            'Atención Primaria y Comunitaria',
+            'Liderazgo y Políticas de Salud',
+            'Salud Planetaria y Sostenibilidad'
+        ];
+
+        trends.forEach(trend => {
+            const label = document.createElement('label');
+            label.className = 'flex items-center space-x-2 cursor-pointer';
+            label.innerHTML = `
+                <input type="checkbox" name="interest" value="${trend}" class="h-5 w-5 rounded border-gray-300 text-[#FF5A5F] focus:ring-[#FF5A5F]">
+                <span>${trend}</span>
+            `;
+            interestsContainer.appendChild(label);
+        });
+
+        generateBtn.addEventListener('click', async () => {
+            const selectedInterests = Array.from(document.querySelectorAll('input[name="interest"]:checked'))
+                .map(cb => cb.value);
+
+            if (selectedInterests.length === 0) {
+                alert('Por favor, selecciona al menos un área de interés.');
+                return;
+            }
+
+            resultContainer.style.display = 'block';
+            resultLoader.style.display = 'block';
+            resultContent.style.display = 'none';
+            generateBtn.disabled = true;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            
+            const systemPrompt = "Actúa como un experto consejero de carrera en el campo de la enfermería y la salud global. Tu tarea es crear un perfil profesional futurista y motivador para un profesional de la enfermería basado en una lista de intereses. El tono debe ser inspirador y visionario. Estructura tu respuesta EXACTAMENTE de la siguiente manera, usando estos títulos en español y negrita:\n\n**Título del Rol:** [Un nombre de cargo creativo y futurista]\n\n**Descripción del Rol:** [Un párrafo que describe las responsabilidades y el día a día de este profesional.]\n\n**Habilidades Clave a Desarrollar:** [Una lista de 3-5 habilidades técnicas y blandas cruciales para este rol.]\n\n**Impacto y Proyección a Futuro:** [Un párrafo final que describe el impacto que este rol tendrá en la salud global y por qué es una carrera emocionante.]";
+
+            const userQuery = `Estoy interesado en las siguientes áreas de la enfermería del futuro: ${selectedInterests.join(', ')}. Por favor, genera un perfil profesional basado en estos intereses.`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: userQuery }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] },
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error en la API: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+                let text = candidate?.content?.parts?.[0]?.text || "No se pudo generar una respuesta.";
+
+                text = text.replace(/\*\*(.*?)\*\*/g, '<h3 class="text-xl font-bold text-[#0B3954] mt-4 mb-2">$1</h3>')
+                           .replace(/\n\n/g, '<br>')
+                           .replace(/\n/g, '<br>')
+                           .replace(/<br>\*/g, '<ul><li class="ml-4">')
+                           .replace(/\* /g, '<li class="ml-4 list-disc">')
+                           .replace(/<br><li/g, '<li');
+
+                resultContent.innerHTML = text;
+
+            } catch (error) {
+                console.error("Error al llamar a la API de Gemini:", error);
+                resultContent.innerHTML = `<p class="text-red-500">Lo sentimos, ha ocurrido un error al generar tu perfil. Por favor, inténtalo de nuevo más tarde.</p>`;
+            } finally {
+                resultLoader.style.display = 'none';
+                resultContent.style.display = 'block';
+                generateBtn.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>
+
